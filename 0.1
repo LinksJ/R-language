@@ -1,0 +1,10 @@
+dose  <- c(20,30,40,50,60)
+drugA <- c(16,20,27,40,60)
+drugB <- c(15,18,25,30,40)
+opar  <- par(no.readonly = TRUE)                  #更改默认
+par(pin=c(4,3))
+par(cex.axis=.75,font.axis=3)                     #轴宽、轴文字大小
+plot(dose,drugA,type="b",lty=6,pch=23,col="blue",bg="green")
+lines(dose,drugB,type="b",pch=5,col="purple")
+legend("topleft",inset = .05,title = "Drug Type",c("A","B"),lty=c(1,2),col=("purple","blue"))
+title(main = "drugA and drugB",col.main="red")    #附加标题
